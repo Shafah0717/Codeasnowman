@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+overflow: hidden;
+}
+
+
+.main{
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+}
+.snowman{
+  display: flex;
+    width: 500px;
+    height: 600px;
+ 
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.lower{
+
+height: 240px;
+width: 240px;
+background-color: #fff;
+border-radius: 50%;
+box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+animation-name: example;
+animation-duration: 4s;
+animation-delay: 2s;
+}
+.middle{
+z-index: 1;
+    height: 180px;
+    width: 180px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: -4em;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.upper{
+    z-index: 2;
+    margin-bottom: -2em;
+        height: 130px;
+        width: 130px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.upper .eye{
+position: absolute;
+top: 35%;
+
+right: 51%;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: #000;
+border-radius: 50%;
+}
+.upper .eye1{
+    position: absolute;
+    top: 35%;
+ 
+    right: 49%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    }
+    .hat{
+        margin-bottom: -6em;
+        margin-left: 5em;
+        z-index: 3;
+    }
+    .hat img{
+width: 250px;
+height: 200px;
+    }
+    .nose{
+        position: absolute;
+    top: 37%;
+ 
+    right: 50%;
+    }
+    .nose img{
+        width: 60px;
+height: 35px;
+    }
+    .shal{
+        position: absolute;
+        top: 42%;
+     
+        right: 44%;
+    }
+    .shal img{
+        transform: rotate(2deg);
+        width: 180px;
+height: 150px;
+    }
+    .lefthand{
+        position: absolute;
+        top: 37%;
+
+        right: 50%;
+    }
+    .lefthand img{
+        height: 150px;
+        width: 250px;
+
+    }
+    .righthand{
+        position: absolute;
+        top: 37%;
+
+        right: 34%;
+    }
+    .righthand img{
+        height: 150px;
+        width: 250px;
+
+    }
+    /* .snowman {
+      
+        opacity: 0; 
+        visibility: hidden;
+        animation: showSnowman 1s forwards;
+        animation-delay: 2s; 
+    }
+    
+    @keyframes showSnowman {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        100% {
+            opacity: 1;
+            visibility: visible; 
+        }
+    }  */
+    */
+
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Snowflakes won't interfere with user interactions */
+}
+
+/* Snowflakes */
+.snow::before,
+.snow::after,
+.snow .flake1,
+.snow .flake2,
+.snow .flake3,
+.snow .flake4,
+.snow .flake5 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall 10s infinite linear;
+}
+
+/* Randomize the snowflakes and their animations */
+.snow::before {
+    left: 20%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.snow::after {
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.snow .flake1 {
+    left: 30%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 18s;
+    animation-delay: 4s;
+}
+
+.snow .flake2 {
+    left: 80%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 16s;
+    animation-delay: 1s;
+}
+
+.snow .flake3 {
+    left: 60%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 13s;
+    animation-delay: 3s;
+}
+
+.snow .flake4 {
+    left: 40%;
+    width: 11px;
+    height: 11px;
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+
+.snow .flake5 {
+    left: 70%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 20s;
+    animation-delay: 6s;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100px) rotate(0deg); 
+    }
+    100% {
+        transform: translateY(100vh) rotate(180deg); 
+    }
+}
+
+
+      .h1 {
+        margin-top: 0.5em;
+        color: #b6fffe;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        position: absolute;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        animation: bounce 2s ease infinite;
+      }
+      
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+
+      @media (min-width: 601px) and (max-width: 1024px) {
+        .h1 {
+            
+          font-size: 70px; /* Adjust font size for medium devices */
+        }
+      
+        .snowman {
+          width: 400px; /* Slightly smaller snowman for tablets */
+          height: 500px;
+        }
+      
+        .lower {
+          height: 200px;
+          width: 200px;
+        }
+      
+        .middle {
+          height: 150px;
+          width: 150px;
+          margin-bottom: -3em;
+        }
+      
+        .upper {
+          height: 110px;
+          width: 110px;
+          margin-bottom: -2em;
+        }
+        .upper .eye{
+            position: absolute;
+            top: 37%;
+            
+            right: 52%;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            }
+        .upper .eye1{
+            position: absolute;
+            top: 37%;
+         
+            right: 48%;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            }
+        .hat{
+            margin-bottom: -5em;
+            margin-left: 5em;
+            z-index: 3;
+        }
+        .hat img {
+          width: 220px;
+          height: 160px;
+        }
+        .nose{
+            position: absolute;
+        top: 39%;
+     
+        right: 50%;
+        }
+        .nose img {
+          width: 55px;
+          height: 32px;
+        }
+        .shal{
+            position: absolute;
+            top: 42%;
+         
+            right: 38%;
+        }
+      
+        .shal img {
+          width: 160px;
+          height: 140px;
+        }
+        .lefthand{
+            position: absolute;
+            top: 37%;
+    
+            right: 51%;
+        }
+        .righthand{
+            position: absolute;
+            top: 38%;
+    
+            right: 12em;
+        }
+        .lefthand img, .righthand img {
+          width: 200px;
+          height: 130px;
+        }
+      
+        /* Snowflakes size adjustment for medium devices */
+        .snow .flake1, .snow .flake2, .snow .flake3, .snow .flake4, .snow .flake5 {
+          width: 7px;
+          height: 7px;
+        }
+      }
+      @media (max-width: 600px) {
+        .h1 {
+            
+            margin: 0.5em;
+          font-size: 50px; /* Reduce font size for smaller screens */
+        }
+      
+        .snowman {
+          width: 300px; /* Reduce snowman size */
+          height: 400px;
+        }
+      
+        .lower {
+          height: 160px;
+          width: 160px;
+        }
+      
+        .middle {
+          height: 120px;
+          width: 120px;
+          margin-bottom: -3em;
+        }
+      
+        .upper {
+          height: 100px;
+          width: 100px;
+          margin-bottom: -2em;
+        }
+      
+        .upper .eye{
+            position: absolute;
+            top: 41.5%;
+            
+            right: 52%;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #000;
+            border-radius: 50%;
+            }
+        .upper .eye1{
+            position: absolute;
+            top: 41.5%;
+         
+            right: 47%;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #000;
+            border-radius: 50%;
+            }
+        .hat{
+            margin-bottom: -5em;
+            margin-left: 5em;
+            z-index: 3;
+        }
+        .hat img {
+          width: 220px;
+          height: 160px;
+        }
+        .nose{
+            position: absolute;
+        top: 43%;
+     
+        right: 50%;
+        }
+        .nose img {
+          width: 55px;
+          height: 32px;
+        }
+        .shal{
+            position: absolute;
+            top: 45%;
+         
+            right: 33%;
+        }
+      
+        .shal img {
+          width: 140px;
+          height: 120px;
+        }
+        .lefthand{
+            position: absolute;
+            top: 40%;
+    
+            right: 51%;
+        }
+        .righthand{
+            position: absolute;
+            top: 40%;
+    z-index: 4;
+            right: 3%;
+        }
+        .lefthand img, .righthand img {
+          width: 180px;
+          height: 120px;
+        }
+      
+        /* Snowflakes size adjustment for mobile */
+        .snow .flake1, .snow .flake2, .snow .flake3, .snow .flake4, .snow .flake5 {
+          width: 6px;
+          height: 6px;
+        }
+      }
+      

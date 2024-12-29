@@ -401,7 +401,7 @@ height: 150px;
       
         .upper .eye{
             position: absolute;
-            top: 41.5%;
+            top: 43%;
             
             right: 52%;
             display: inline-block;
@@ -412,7 +412,7 @@ height: 150px;
             }
         .upper .eye1{
             position: absolute;
-            top: 41.5%;
+            top: 43%;
          
             right: 47%;
             display: inline-block;
@@ -432,7 +432,7 @@ height: 150px;
         }
         .nose{
             position: absolute;
-        top: 43%;
+        top: 44%;
      
         right: 50%;
         }

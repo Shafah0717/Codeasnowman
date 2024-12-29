@@ -459,8 +459,8 @@ height: 150px;
         }
         .righthand{
             position: absolute;
-            top: 39%;
-    z-index: 4;
+            top: 43%;
+ 
             right: 3%;
         }
         .lefthand img, .righthand img {
